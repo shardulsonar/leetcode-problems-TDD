@@ -1,5 +1,6 @@
 package com.leetcode.problems;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.List;
 public class PermutationsTest {
 
     @Test
-    void testPermutationsOfElementsofArray(){
+    void testPermutationsOfElementsOfArray(){
         Permutations permutations = new Permutations();
 
         List<List<Integer>> expected = new ArrayList<>();
@@ -22,5 +23,7 @@ public class PermutationsTest {
 
         int [] nums = {1,2,3};
         List<List<Integer>> actual = permutations.permute(nums);
+        Assertions.assertEquals(actual,expected);
+
     }
 }
